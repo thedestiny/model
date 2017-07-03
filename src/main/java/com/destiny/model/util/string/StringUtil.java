@@ -9,7 +9,7 @@ import java.net.URLEncoder;
 public class StringUtil {
 
 
-    public static boolean isEmpty (String content){
+    public static boolean isEmpty(String content) {
         return StringUtils.isEmpty(content);
     }
 
@@ -82,7 +82,7 @@ public class StringUtil {
 
     }
 
-    public static String URLdecode(String content,String format) {
+    public static String URLdecode(String content, String format) {
 
         try {
             return URLDecoder.decode(content, format);
@@ -90,5 +90,14 @@ public class StringUtil {
             System.out.println("decode failure !");
             return "";
         }
+    }
+
+    public static Integer transToInteger(String str ) {
+
+        if(isEmpty(str))
+            return 0;
+
+        return Integer.parseInt(str);
+
     }
 }
